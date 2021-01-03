@@ -1,6 +1,7 @@
 ## Parameters and Hyperparameters!! Are they same??
 
-No, they are different. Basically, hyperparameters are introduced when we are about to tune a model, be it on the training data set or the validation data set. These hyperparameters change as the models change.
+No, they are different. Basically, hyperparameters are introduced when we are about to tune a model, be it on the training data set or the validation data set. These 
+hyperparameters change as the models change.
 
 For example, in:
 
