@@ -1,17 +1,17 @@
 ## Parameters and Hyperparameters!! Are they same??
 
-No, there is a difference.
+No, they are different. Basically, hyperparameters are introduced when we are about to tune a model, be it on the training data set or the validation data set. These hyperparameters change as the models change.
 
+For example, in:
 
+>>> K means clustering : k i.e. the number of clusters is a hyperparameter
 
+>>> Random Forest : Number of layers is a hyperparameter
 
+>>> Decision Tree : Depth of the tree is a hyperparameter
 
 
 Slowly, we may understand what values of hyperparameters will be more useful than the others with more trial and error.
-
-
-
-
 
 It is best explained by Andrew Ng, please do check out!!
 
