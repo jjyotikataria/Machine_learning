@@ -1,2 +1,23 @@
-train.select_dtypes("object").columns
+list = train.select_dtypes("object").columns
 
+train[list].isnull().sum()
+
+train[list].describe().T
+
+null_cols_90 = traindata.columns[round(traindata.isnull().sum()/len(traindata.index)*100,2) > 90].tolist()
+
+
+from pandas_profiling import ProfileReport
+#We only use the first 10000 data points
+prof = ProfileReport(train.sample(n=25)) 
+prof.to_file(output_file='output.html')
+
+
+train["height_metre_sq"] = train["height"].apply(lambda x:x/100)
+train["bmi_new"] = train["weight"]/train["height_metre_sq"]**2
+
+train["height"].fillna(median_height, inplace = True)
+
+train.columns[train.isnull().sum()/len() > 90]
+
+train.drop(['h1_lactate_min', 'h1_pao2fio2ratio_max', 'h1_pao2fio2ratio_min'], axis=1)
